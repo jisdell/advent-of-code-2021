@@ -1,3 +1,3 @@
 # advent-of-code-2021
 
-Day 1: My answer is one result shy of the correct answer
+I'm using this to test the Javascript I already know, and to try to learn more as I progress. 

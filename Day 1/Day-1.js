@@ -1,6 +1,6 @@
 var fs = require('fs');
 var text = fs.readFileSync('./input.txt', "utf-8");
-var textByLine = text.split("\n");
+var textByLine = text.split("\n").map(Number);
 var arrayLength = textByLine.length
 var count = 0
 

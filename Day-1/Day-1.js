@@ -13,4 +13,4 @@ for(var i=0; i < arrayLength; i++){
         console.log(textByLine[i]+" Decreased to " + textByLine[i+1])
     }
     else console.log(textByLine[i]+" No Change")
-}
+};

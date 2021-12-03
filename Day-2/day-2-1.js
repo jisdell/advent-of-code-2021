@@ -1,5 +1,5 @@
 const fs = require('fs');
-const text = fs.readFileSync("/Users/jacobisdell/advent-of-code-2021/Day-2/input.txt", "utf-8");
+const text = fs.readFileSync("./input.txt", "utf-8");
 const textByLine = text.split("\n");
 const arrayLength = textByLine.length;
 
@@ -11,17 +11,18 @@ function getResult(lines, array){
         let move = words[0]
         let number = Number(words[1])
         if(move==="forward"){
-            distance = number + distance
+            distance += number 
         }
         else if (move==="down"){
-            depth = number - depth
+            depth += number 
         }
         else if (move==="up"){
-            depth = number + depth
+            depth -= number
         }
+    //Used to check the passes  
+    //console.log(distance)
+    //console.log(depth)
     }
-    console.log(distance)
-    console.log(depth)
     return distance * depth
 };
 console.log(getResult(textByLine,arrayLength));

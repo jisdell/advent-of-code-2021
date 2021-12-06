@@ -6,12 +6,14 @@ const arrayLength = textByLine.length;
 function getResult(lines, array){
     let distance = 0
     let depth = 0
+    let aim = 0
     for(let i=0; i < array; i++){
         let words = lines[i].split(" ")
         let move = words[0]
         let number = Number(words[1])
         if(move==="forward"){
             distance += number 
+            aim += number * depth
         }
         else if (move==="down"){
             depth += number 
@@ -22,7 +24,8 @@ function getResult(lines, array){
     //Used to check the passes  
     //console.log(distance)
     //console.log(depth)
+    //console.log(aim)
     }
-    return distance * depth
+    return distance * aim
 };
 console.log(getResult(textByLine,arrayLength));
